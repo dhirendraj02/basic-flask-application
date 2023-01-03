@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} Meters {% endblock %}</h1>
+
+<table border="1">
+    <th>ID</th>
+    <th>LABEL</th>
+
+    {% for meter in meters %}
+    </tr>
+    <td>{{ meter['id'] }}</td>
+    <td><a href="{{ url_for('meters') }}/{{meter['id']}}">{{ meter['label'] }}</a></td>
+    {% endfor %}
+
+
+</table>
+{% endblock %}
